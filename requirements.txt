@@ -4,3 +4,4 @@ wget
 argparse
 colorama
 humanfriendly
+pyfiglet
