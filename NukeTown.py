@@ -1,4 +1,4 @@
-# Created by LimerBoy
+# Created by BraiNiac
 # Import modules
 import os
 import sys
