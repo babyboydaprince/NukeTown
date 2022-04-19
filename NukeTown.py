@@ -1,4 +1,4 @@
-# Created by BraiNiac
+# Created by BraiNiacn
 # Import modules
 import os
 import sys
@@ -28,8 +28,7 @@ parser.add_argument(
 parser.add_argument(
     "--way",
     type=str,
-    metavar="<JACKPHONE/JACKMAIL/NTP/UDP/SYN/ \
-        ICMP/POD/SLOWLORIS/MEMCACHED/HTTP>",
+    metavar="<JACKPHONE/JACKMAIL/NTP/UDP/SYN/ICMP/POD/SLOWLORIS/MEMCACHED/HTTP>",
     help="Attack method",
 )
 parser.add_argument(
