@@ -10,14 +10,14 @@ from modules.ipTools import GetTargetAddress, InternetConnectionCheck
 
 
 def GetMethodByName(way):
-    if way == "SMS":
-        dir = "tools.SMS.main"
-    elif way == "EMAIL":
-        dir = "tools.EMAIL.main"
+    if way == "JACKPHONE":
+        dir = "modules.jackphone.runner"
+    elif way == "JACKMAIL":
+        dir = "modules.JACKMAIL.mailOperator"
     elif way in ("SYN", "UDP", "NTP", "POD", "ICMP", "MEMCACHED"):
-        dir = f"tools.L4.{way.lower()}"
+        dir = f"modules.protocols.{way.lower()}"
     elif way in ("HTTP", "SLOWLORIS"):
-        dir = f"tools.L7.{way.lower()}"
+        dir = f"modules.ref.{way.lower()}"
     else:
         raise SystemExit(
             f"{Fore.RED}[!] {Fore.MAGENTA}Unknown ddos method \
