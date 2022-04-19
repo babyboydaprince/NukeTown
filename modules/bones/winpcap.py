@@ -13,12 +13,10 @@ if os.name == 'nt':
         if input(
                 f'{Fore.MAGENTA} ---> {Fore.BLUE}').lower() in ('y', 'yes'):
             print(
-                f'{Fore.YELLOW}[~] {Fore.CYAN}Downloading installer...'
-                '{Fore.BLUE}\n')
+                f'{Fore.YELLOW}[~] {Fore.CYAN}Downloading installer...{Fore.BLUE}\n')
             winpcap_installer = wget.download(winpcap_url)
             os.startfile(winpcap_installer)
             print(
-                f'\n\n{Fore.GREEN}[?] {Fore.YELLOW}Installation finished.'
-                ' Please restart program{Fore.RESET}'
+                f'\n\n{Fore.GREEN}[?] {Fore.YELLOW}Installation finished. Please restart program{Fore.RESET}'
             )
             sys.exit(1)
