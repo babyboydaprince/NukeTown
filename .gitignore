@@ -2,3 +2,5 @@
 .mypy_cache/
 .vscode/
 venv/
+modules/__pycache__/
+modules/bones/__pycache__/
