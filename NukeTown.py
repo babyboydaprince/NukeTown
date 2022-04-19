@@ -43,18 +43,18 @@ parser.add_argument(
 args = parser.parse_args()
 threads = args.threads
 time = args.time
-method = str(args.method).upper()
+way = str(args.way).upper()
 target = args.target
 
 
 if __name__ == "__main__":
     # Print help
-    if not method or not target or not time:
+    if not way or not target or not time:
         parser.print_help()
         sys.exit(1)
 
     # Run ddos attack
     with AttackMethod(
-        duration=time, name=method, threads=threads, target=target
+        duration=time, name=way, threads=threads, target=target
     ) as Flood:
         Flood.Start()
