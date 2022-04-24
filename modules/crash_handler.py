@@ -32,7 +32,7 @@ def CriticalError(message, error):
     {Fore.MAGENTA}TIME: {ctime()}
     {Fore.RED}:=== Report:
     {Fore.MAGENTA}Please report it
-    here: https://github.com/LimerBoy/Impulse/issues/new
+    here: https://github.com/babyboydaprince/NukeTown/issues/new
     {Fore.RESET}
     """)
     sys.exit(5)
