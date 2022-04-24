@@ -1,12 +1,13 @@
 from colorama import Fore
-from random import _urandom, randint
+from random import randint
+from os import urandom
 
 # Random data generator
 
 
 def __randomic():
     size = randint(10, 90)
-    data = str(_urandom(size))
+    data = str(urandom(size))
     return data[:-1][2:]
 
 

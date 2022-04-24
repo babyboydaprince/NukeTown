@@ -20,11 +20,9 @@ smtp_port = 587
 
 def WriteSenderEmail():
     username = input(
-        f'{Fore.BLUE}[?] {Fore.MAGENTA}Please'
-        ' enter sender gmail address: {Fore.BLUE}')
+        f'{Fore.BLUE}[?] {Fore.MAGENTA}Please enter sender gmail address: {Fore.BLUE}')
     password = getpass(
-        f'{Fore.BLUE}[?] {Fore.MAGENTA}Please'
-        ' enter sender gmail password: {Fore.BLUE}')
+        f'{Fore.BLUE}[?] {Fore.MAGENTA}Please enter sender gmail password: {Fore.BLUE}')
     server = SMTP(smtp_server, smtp_port)
     server.ehlo()
     server.starttls()
@@ -47,7 +45,7 @@ def WriteSenderEmail():
     confirm = input(
         '{Fore.BLUE}[?] {Fore.MAGENTA}Whould you like to save'
         ' this information for future reference? (y/n) : {Fore.BLUE}')
-    confirm = confirm.upper() in ('Y', 'YES')
+    confirm = confirm.upper() in ('Y', 'YES', '1', 'TRUE')
     if confirm:
         # Write database
         with open(sender_email_database, 'w') as db:

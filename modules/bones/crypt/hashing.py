@@ -5,10 +5,10 @@ from string import ascii_letters
 # Get sugar numbers
 def getSugarByKey(key, message):
     sugar = ''
-    yHash = md5(key.Encode()).hexdigest()
+    xhash = md5(key.Encode()).hexdigest()
 
     while True:
-        for char in yHash:
+        for char in xhash:
             if len(sugar) == len(message):
                 break
             if char not in ascii_letters:

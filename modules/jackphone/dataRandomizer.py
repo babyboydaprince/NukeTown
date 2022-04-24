@@ -37,6 +37,12 @@ def random_suffix(int_range=4):
 
 
 # Create random email by name, suffix, mail
+# Example: Billy3715@gmail.com
+def random_email():
+    return random_name() + random_suffix() + "@" + random.choice(mails)
+
+
+# Create random email by name, suffix, mail
 # Example Billy3715@gmail.com
 def random_password():
     return random_name() + random_suffix(int_range=10)

@@ -1,5 +1,4 @@
-from pyfiglet import Figlet
-from termcolor import colored
+from colorama import Fore
 
 # Banner
 dona = """
@@ -10,13 +9,23 @@ dona = """
 """
 
 
-def banner():
-    f = Figlet(font='alligator')
-
-    print(colored(f.renderText(' N u k e'), 'yellow'))
-    print(colored(f.renderText('       T o w n'), 'green'))
-
-    return print(dona)
-
-
-banner()
+# Banner
+print(rf"""{Fore.YELLOW}
+      ::::    :::      :::    :::       :::    :::       :::::::::: 
+     :+:+:   :+:      :+:    :+:       :+:   :+:        :+:         
+    :+:+:+  +:+      +:+    +:+       +:+  +:+         +:+          
+   +#+ +:+ +#+      +#+    +:+       +#++:++          +#++:++#      
+  +#+  +#+#+#      +#+    +#+       +#+  +#+         +#+            
+ #+#   #+#+#      #+#    #+#       #+#   #+#        #+#             
+###    ####       ########        ###    ###       ##########       
+{Fore.RESET}""")
+print(rf"""{Fore.GREEN}
+   :::::::::::       ::::::::     :::       :::       ::::    ::: 
+      :+:          :+:    :+:    :+:       :+:       :+:+:   :+:  
+     +:+          +:+    +:+    +:+       +:+       :+:+:+  +:+   
+    +#+          +#+    +:+    +#+  +:+  +#+       +#+ +:+ +#+    
+   +#+          +#+    +#+    +#+ +#+#+ +#+       +#+  +#+#+#     
+  #+#          #+#    #+#     #+#+# #+#+#        #+#   #+#+#      
+ ###           ########       ###   ###         ###    ####            
+{Fore.RESET}""")
+print(rf"""{Fore.MAGENTA}                                   Made by BraiNiac{Fore.RESET}""")
