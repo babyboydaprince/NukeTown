@@ -1,10 +1,9 @@
 from colorama import Fore
 from random import randint
-from os import urandom
+from os import urandom as urandom
+
 
 # Random data generator
-
-
 def __randomic():
     size = randint(10, 90)
     data = str(urandom(size))
