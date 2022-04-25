@@ -11,6 +11,7 @@ try:
     import modules.bones.clear
     import modules.bones.banner
     import modules.bones.winpcap
+    import modules.jackmail.mailGear
     from modules.way import AttackMethod
 except ImportError as err:
     CriticalError("Failed import some modules", err)
