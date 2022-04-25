@@ -1,3 +1,4 @@
+# Socket creation needs fixing
 import random
 import socket
 import modules.dataRandomizer as randomData
