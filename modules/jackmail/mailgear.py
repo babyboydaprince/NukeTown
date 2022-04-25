@@ -9,7 +9,7 @@ import modules.bones.crypt.sparkle as sparkle
 
 
 # Login data
-sender_email_database = 'bones/jackmail/sender.json'
+sender_email_database = 'modules/jackmail/sender.json'
 sparkle_encryption_key = getuser() + ':SPARKLE'
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587
@@ -43,8 +43,7 @@ def WriteSenderEmail():
 
     # Save data to db?
     confirm = input(
-        '{Fore.BLUE}[?] {Fore.MAGENTA}Whould you like to save'
-        ' this information for future reference? (y/n) : {Fore.BLUE}')
+        '{Fore.BLUE}[?] {Fore.MAGENTA}Whould you like to save this information for future reference? (y/n) : {Fore.BLUE}')
     confirm = confirm.upper() in ('Y', 'YES', '1', 'TRUE')
     if confirm:
         # Write database
