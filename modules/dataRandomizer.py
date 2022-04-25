@@ -12,13 +12,13 @@ def random_IP():
 
 # Get random referer
 def random_referer():
-    with open('tools/protocolgear/referers.txt', 'r') as referers:
+    with open('modules/ref/referers.txt', 'r') as referers:
         referers = referers.readlines()
     return random.choice(referers)
 
 
 # Get random user agent
 def random_useragent():
-    with open('tools/protocolgear/user-agents.json', 'r') as agents:
+    with open('modules/ref/user_agents.json', 'r') as agents:
         user_agents = json.load(agents)['agents']
     return random.choice(user_agents)
