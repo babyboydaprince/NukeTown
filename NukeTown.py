@@ -1,5 +1,4 @@
 # Created by BraiNiac
-# Import modules
 import os
 import sys
 import argparse
