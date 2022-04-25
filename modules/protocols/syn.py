@@ -1,5 +1,6 @@
 import random
-from scapy.all import IP, TCP, send
+from scapy.all import send
+from scapy.layers.inet import IP, TCP
 import modules.dataRandomizer as randomData
 from colorama import Fore
 
@@ -21,11 +22,9 @@ def flood(target):
             send(IP_Packet / TCP_Packet, verbose=False)
         except Exception as e:
             print(
-                f"{Fore.MAGENTA}Error while sending SYN \
-                    packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
+                f"{Fore.MAGENTA}Error while sending SYN packet\n{Fore.MAGENTA}{e}{Fore.RESET}"
             )
         else:
             print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}SYN packet sent to \
-                    {'{}:{}'.format(*target)}.{Fore.RESET}"
+                f"{Fore.GREEN}[+]{Fore.YELLOW}SYN packet sent to {'{}:{}'.format(*target)}.{Fore.RESET}"
             )
