@@ -1,5 +1,6 @@
 import random
-from scapy.all import IP, send, Raw, UDP
+from scapy.all import send, Raw
+from scapy.layers.inet import IP, UDP
 from socket import gaierror
 from colorama import Fore
 
