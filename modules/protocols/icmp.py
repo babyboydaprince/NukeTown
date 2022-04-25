@@ -1,4 +1,5 @@
-from scapy.all import IP, TCP, send, RandShort
+from scapy.all import send, RandShort
+from scapy.layers.inet import IP, TCP
 from colorama import Fore
 
 
@@ -13,11 +14,9 @@ def flood(target):
             send(packet, verbose=False)
         except Exception as e:
             print(
-                f"{Fore.RED}[!] {Fore.MAGENTA}Error while \
-                    sending 'ICMP'\n{Fore.MAGENTA}{e}{Fore.RESET}"
+                f"{Fore.RED}[!] {Fore.MAGENTA}Error while sending 'ICMP'\n{Fore.MAGENTA}{e}{Fore.RESET}"
             )
         else:
             print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}ICMP \
-                    packet send to {target[0]} {Fore.RESET}"
+                f"{Fore.GREEN}[+]{Fore.YELLOW}ICMP packet send to {target[0]} {Fore.RESET}"
             )
