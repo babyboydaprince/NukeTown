@@ -12,7 +12,7 @@ def GetMethodByName(way):
     if way == "JACKPHONE":
         dir = "modules.jackphone.runner"
     elif way == "JACKMAIL":
-        dir = "modules.JACKMAIL.mailOperator"
+        dir = "modules.jackmail.mailOperator"
     elif way in ("SYN", "UDP", "NTP", "POD", "ICMP", "MEMCACHED"):
         dir = f"modules.protocols.{way.lower()}"
     elif way in ("HTTP", "SLOWLORIS"):
