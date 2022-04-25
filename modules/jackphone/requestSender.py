@@ -6,7 +6,7 @@ import modules.jackphone.dataRandomizer as randomData
 
 # Read servicegear file
 def getServices(file="modules/jackphone/servicegear.json"):
-    with open(file, "r", encoding="utf-8", erros="ignore") as services:
+    with open(file, "r", encoding='utf-8', errors='ignore') as services:
         return json.load(services)["services"]
 
 
