@@ -1,4 +1,4 @@
-# Created by BraiNiacn
+# Created by BraiNiac
 # Import modules
 import os
 import sys
@@ -18,7 +18,7 @@ except ImportError as err:
     sys.exit(1)
 
 # Parse args
-parser = argparse.ArgumentParser(description="DoS ToolKit")
+parser = argparse.ArgumentParser(description="Nuke Town - DDoS ToolKit")
 parser.add_argument(
     "--target",
     type=str,
