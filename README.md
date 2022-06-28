@@ -1,4 +1,4 @@
-# Nuke Town DDoS Toolkit
+# Nuke Town - DDoS Toolkit
 
 Python DDoS toolkit which is compatible with several types of network protocols as well
 as e-mail and sms.
