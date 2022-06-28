@@ -9,13 +9,16 @@ class tool():
         self._ip = ip
         self._port = port
         self._headers = [
-            "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5 (.NET CLR 3.5.30729)",
+            "User-Agent: Mozilla/5.0 (Windows; U; \
+                Windows NT 6.1; en-US; rv:1.9.1.5) \
+                    Gecko/20091102 Firefox/3.5.5 (.NET CLR 3.5.30729)",
             "Accept-Language: en-us,en;q=0.5"
         ]
         self._sockets = [self.newSocket() for _ in range(socketCount)]
 
     def getMessage(self, message):
-        return (message + "{} HTTP/1.1\r\n".format(str(random.randint(0, 2000)))).encode("utf-8")
+        return (message + "{} HTTP/1.1\r\n".format(str(
+            random.randint(0, 2000)))).encode("utf-8")
 
     def newSocket(self):
         try:
