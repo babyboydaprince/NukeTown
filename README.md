@@ -13,8 +13,8 @@ python NukeTown.py -h
  ```
 ### 📋 Prerequisites
 
--> Python 3
--> WinPcap (for windows users)
+- Python 3
+- WinPcap (for windows users)
 
 
 ### 🔧 Installation
@@ -27,12 +27,12 @@ python NukeTown.py -h
 
 ## 🛠️ Made with
 
--> Python 3.9.13
+- Python 3.9.13
 
 
 ## 📌 Nuke Town version
 
--> 1.0
+- 1.0
 
 ---
 
