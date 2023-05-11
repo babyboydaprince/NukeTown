@@ -9,7 +9,7 @@ certifi
 charset-normalizer
 colorama
 dill
-figlet
+pyfiglet
 flake8
 humanfriendly
 idna
