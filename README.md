@@ -1,34 +1,29 @@
-# Nuke Town - DDoS Toolkit
+# Nuke Town - Percformance and stress testing toolset
 
-Python DDoS toolkit which is compatible with several types of network protocols as well
-as e-mail and sms.
+Python performance test toolkit that is compatible with several types of network protocols, as well as email and SMS.
 
-![alt text](https://github.com/babyboydaprince/NukeTown/blob/main/img/logo.png?raw=true)
-![alt text](https://github.com/babyboydaprince/NukeTown/blob/main/img/menu.png?raw=true)
+It was designed with the intent of testing the performance, integrity, and flexibility of any and every tool that communicates with the services it is compatible with.
+
+Versatile, handy, easy to use, and resilient.
+
+Currently under development, so sit back, and relax...
+
+<img src="https://github.com/babyboydaprince/NukeTown/blob/main/img/codeing.gif?raw=true" width="35">
 
 ## 🚀 Run
 
- ```
-python NukeTown.py -h
- ```
+
 ### 📋 Prerequisites
 
 - Python 3
-- WinPcap (for windows users)
-
+- WinPcap (for Windows users)
 
 ### 🔧 Installation
-```
-pip install -r requirements.txt
-```
-```
-python NukeTown.py -h
-```
+
 
 ## 🛠️ Made with
 
 - Python 3.9.13
-
 
 ## 📌 Nuke Town version
 
@@ -38,23 +33,27 @@ python NukeTown.py -h
 
 ## 📄 Terms
 
-I, the developer, do not take any responsibility charges for bad usage
-of this software.
+I, the developer, do not take any responsibility for any sort of misuse of this software. The ethical use of this toolset is highly recommended.
 
-This tool was created for study purposes.
+ALWAYS KEEP THIS IN MIND:
 
-Respect other people's privacy.
+- STEP 1: Ethics are key for your personal development;
+- STEP 2: A skilled professional does not need to transgress other people's privacy or impact the functioning of software that is not their own;
+- STEP 3: Don't touch what is not yours;
+- FINAL STEP: Read step one;
 
-
----
-
-## 📌 Comming soon
-
-- Fully functional SMS flooding feature;
-- Fully functional E-mail flooding feature.
+If you don't know what you're doing, how the hell can you be real? ⭐
 
 ---
 
+## 📌 Coming Soon
 
+- Fully functional SMS channel stress submodule;
+- Fully functional email channel stress submodule;
+- And other lovely sorceries;
 
-⌨️ Made with ❤️ by [BraiNiac](https://github.com/babyboydaprince) 👽
+---
+
+⌨️ Continuation by [BraiNiac](https://github.com/babyboydaprince) 👽 <br>
+💡 Kindly thanking [LimerBoy](https://github.com/purnasth) for inspiring the entire project and for
+serving the base of the whole project. Thanks a bunch and keep it up with the fine work.

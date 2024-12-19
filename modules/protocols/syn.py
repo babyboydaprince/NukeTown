@@ -5,7 +5,7 @@ import modules.dataRandomizer as randomData
 from colorama import Fore
 
 
-def flood(target):
+def burst_sender(target):
     IP_Packet = IP()
     IP_Packet.src = randomData.random_IP()
     IP_Packet.dst = target[0]

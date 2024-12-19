@@ -5,7 +5,7 @@ from humanfriendly import format_timespan, Spinner
 from modules.crash_handler import CriticalError
 from modules.ipTools import GetTargetAddress, InternetConnectionCheck
 
-""" Find & import ddos method """
+""" Find & import testing method """
 
 
 def GetMethodByName(way):
@@ -19,7 +19,7 @@ def GetMethodByName(way):
         dir = f"modules.ref.{way.lower()}"
     else:
         raise SystemExit(
-            f"{Fore.RED}[!] {Fore.MAGENTA}Unknown ddos method \
+            f"{Fore.RED}[!] {Fore.MAGENTA}Unknown testing method \
                 {repr(way)} selected..{Fore.RESET}"
         )
     module = __import__(dir, fromlist=["object"])
@@ -33,10 +33,10 @@ def GetMethodByName(way):
         )
 
 
-""" Class to control attack methods """
+""" Class to control nuking methods methods """
 
 
-class AttackMethod:
+class TestingMethod:
 
     # Constructor
     def __init__(self, name, duration, threads, target):
@@ -57,7 +57,7 @@ class AttackMethod:
 
     # Exit
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print(f"{Fore.MAGENTA}[!] {Fore.BLUE}Attack completed!{Fore.RESET}")
+        print(f"{Fore.MAGENTA}[!] {Fore.BLUE}Nukes launched successfully!{Fore.RESET}")
 
     # Run time checker
     def __RunTimer(self):
@@ -102,7 +102,7 @@ class AttackMethod:
                     {index + 1}.{Fore.RESET}"
             )
 
-    # Start ddos attack
+    # Launch test
     def Start(self):
         if self.name == "JACKMAIL":
             target = self.target_name
@@ -111,9 +111,9 @@ class AttackMethod:
                 "()").replace(", ", ":").replace("'", "")
         duration = format_timespan(self.duration)
         print(
-            f"{Fore.MAGENTA}[?] {Fore.BLUE}Starting attack to \
+            f"{Fore.MAGENTA}[?] {Fore.BLUE}Launching nukes to \
                 {target} using method {self.name}.{Fore.RESET}\n"
-            f"{Fore.MAGENTA}[?] {Fore.BLUE}Attack will be stopped \
+            f"{Fore.MAGENTA}[?] {Fore.BLUE}Bombarding will be stopped \
                 after {Fore.MAGENTA}{duration}{Fore.BLUE}.{Fore.RESET}"
         )
         self.is_running = True

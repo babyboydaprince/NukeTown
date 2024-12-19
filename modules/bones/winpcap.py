@@ -8,7 +8,7 @@ if os.name == 'nt':
     winpcap_dir = os.environ['ProgramFiles(x86)'] + '\\WinPcap'
     if not os.path.exists(winpcap_dir):
         print(
-            f'{Fore.MAGENTA}[!] {Fore.YELLOW}"WinPcap" module is not installed.\n It is a necessary tool to perform several kinds of attacks,\n you may skip this step if you wish to perform SMS flooding only\n Continue WinPcap installation? (y/n){Fore.RESET}'
+            f'{Fore.MAGENTA}[!] {Fore.YELLOW}"WinPcap" module is not installed.\n It is a necessary tool to perform several kinds of performance tests,\n you may skip this step if you wish to perform SMS flooding only\n Continue WinPcap installation? (y/n){Fore.RESET}'
         )
         if input(
                 f'{Fore.MAGENTA} ---> {Fore.BLUE}').lower() in ('y', 'yes'):

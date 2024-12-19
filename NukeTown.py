@@ -11,13 +11,13 @@ try:
     import modules.bones.clear
     import modules.bones.banner
     import modules.bones.winpcap
-    from modules.way import AttackMethod
+    from modules.way import TestingMethod
 except ImportError as err:
     CriticalError("Failed import some modules", err)
     sys.exit(1)
 
 # Parse args
-parser = argparse.ArgumentParser(description="Nuke Town - DDoS ToolKit")
+parser = argparse.ArgumentParser(description="Nuke Town - Performance and stress testing tollset")
 parser.add_argument(
     "--target",
     type=str,
@@ -28,7 +28,7 @@ parser.add_argument(
     "--way",
     type=str,
     metavar="<JACKPHONE/JACKMAIL/NTP/UDP/SYN/ICMP/POD/SLOWLORIS/MEMCACHED/HTTP>",
-    help="Attack method",
+    help="Testing technique",
 )
 parser.add_argument(
     "--time", type=int, default=10, metavar="<time>", help="time in secounds"
@@ -52,8 +52,8 @@ if __name__ == "__main__":
         parser.print_help()
         sys.exit(1)
 
-    # Run ddos attack
-    with AttackMethod(
+    # Run test
+    with TestingMethod(
         duration=time, name=way, threads=threads, target=target
-    ) as Flood:
-        Flood.Start()
+    ) as burst_sender:
+        burst_sender.Start()
